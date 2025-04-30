@@ -1,5 +1,5 @@
 import React from 'react';
-import {Title} from "@/components/shared";
+import {Title, CheckboxFiltersGroup} from "@/components/shared";
 import {FilterCheckbox} from "@/components/shared/filter-checkbox";
 import {Input, RangeSlider} from "@/components/ui";
 
@@ -26,6 +26,25 @@ export const Filters: React.FC<Props> = ({className}) => {
                 </div>
                 <RangeSlider min={0} max={5000} step={10} value={[0, 5000]}/>
             </div>
+            <CheckboxFiltersGroup title="Ингредиенты" className="mt-5" limit={6} defaultItems={[
+                {
+                    text: 'Сырный соус',
+                    value: '1'
+                },
+                {
+                    text: 'Моццарелла',
+                    value: '2'
+                }
+            ]} items={[
+                {
+                    text: 'Сырный соус',
+                    value: '1'
+                },
+                {
+                    text: 'Моццарелла',
+                    value: '2'
+                }
+            ]}/>
         </div>
     )
 }
